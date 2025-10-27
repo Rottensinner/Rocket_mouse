@@ -1,0 +1,9 @@
+{
+  "users": [
+    { "id": 1, "name": "Jan", "role": "admin" },
+    { "id": 2, "name": "Anna", "role": "user" }
+  ],
+  "posts": [
+    { "id": 1, "title": "Hello Vue", "content": "To jest testowy post." }
+  ]
+}

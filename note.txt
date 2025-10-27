@@ -1,0 +1,10 @@
+Dynamiczny routing fajna rzecz do ogarnięcia
+https://router.vuejs.org/guide/essentials/dynamic-matching.html
+
+import.meta.glob z vue i vite daje możliwość importowania wielu modułów
+https://vite.dev/guide/features.html#glob-import
+
+fajny lazy-loading do routea
+
+Object.entries()
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/entries
