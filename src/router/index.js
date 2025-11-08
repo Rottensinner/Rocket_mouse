@@ -1,11 +1,7 @@
 import { createRouter, createMemoryHistory } from "vue-router";
 import HomeView from "@/page/MainView.vue";
-import projectList from "@/utility/projectsList.js";
 
-const routes = [
-  { path: "/", name: "home", component: HomeView },
-  ...projectList.map()
-];
+const routes = [{ path: "/", name: "home", component: HomeView }];
 
 export const router = createRouter({
   history: createMemoryHistory(),
