@@ -1,7 +1,7 @@
 <template>
-  <MainView />
+  <RouterView />
 </template>
 
 <script setup>
-import MainView from "./page/MainView.vue";
+import MainView from "./page/ProjectView.vue";
 </script>

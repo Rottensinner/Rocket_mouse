@@ -1,9 +1,13 @@
-import { createRouter, createMemoryHistory } from "vue-router";
-import HomeView from "@/page/MainView.vue";
+import { createRouter, createWebHistory } from "vue-router";
+import ProjectView from "@/page/ProjectView.vue";
+import ToDoListView from "@/page/ToDoListView.vue";
 
-const routes = [{ path: "/", name: "home", component: HomeView }];
+const routes = [
+  { path: "/projects", name: "home", component: ProjectView },
+  { path: "/todo-list", name: "todo-list", component: ToDoListView },
+];
 
 export const router = createRouter({
-  history: createMemoryHistory(),
+  history: createWebHistory(),
   routes,
 });

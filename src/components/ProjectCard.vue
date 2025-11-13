@@ -2,26 +2,37 @@
   <div class="card-container">
     <div class="card-inner">
       <div class="card-front">
-        <div class="card-picture"></div>
+        <div class="card-picture">
+          <img class="card-picture" :src="img" alt="a" />
+        </div>
         <div class="card-info">
           <h5>{{ id }}. {{ name }}</h5>
         </div>
       </div>
-
       <div class="card-back">
         <div class="card-info">
           <p>{{ description }}</p>
+          <div class="btn-next" v-on:click="goTo()">Przejdź dalej -></div>
         </div>
       </div>
     </div>
   </div>
 </template>
 <script setup>
-defineProps({
+import { useRouter } from "vue-router";
+
+const router = useRouter();
+const props = defineProps({
   id: Number,
   name: String,
   description: String,
+  img: String,
+  site: String,
 });
+
+const goTo = () => {
+  router.push(props.site);
+};
 </script>
 <style scoped>
 .card-container {
@@ -45,8 +56,8 @@ defineProps({
 .card-front,
 .card-back {
   position: absolute;
-  width: 200px;
-  height: 250px;
+  width: 100%;
+  height: 100%;
   border-radius: 5%;
   backface-visibility: hidden;
   overflow: hidden;
@@ -57,13 +68,16 @@ defineProps({
   align-items: baseline;
 }
 .card-picture {
+  position: relative;
   background-color: blue;
   border-radius: 5% 5% 0 0;
   width: 200px;
   height: 200px;
   padding: 0;
   margin: 0;
+  overflow: hidden;
 }
+
 .card-info {
   /* height: 50px; */
   color: black;
@@ -83,5 +97,11 @@ defineProps({
 }
 p {
   font-size: 16px;
+}
+.btn-next {
+  width: 100%;
+  background-color: #333;
+  padding: 2%;
+  color: aliceblue;
 }
 </style>

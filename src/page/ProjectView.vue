@@ -16,6 +16,8 @@
       :id="item.id"
       :name="item.name"
       :description="item.description"
+      :img="item.img"
+      :site="item.site"
     />
   </div>
   <p>Liczba projektów {{ projectCount }}</p>
