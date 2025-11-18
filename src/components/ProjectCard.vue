@@ -103,5 +103,6 @@ p {
   background-color: #333;
   padding: 2%;
   color: aliceblue;
+  cursor: pointer;
 }
 </style>

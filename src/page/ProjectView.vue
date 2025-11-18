@@ -1,13 +1,5 @@
 <template>
-  <header class="headline-main">
-    <h1 class="headline-text">Lista projektów</h1>
-    <div class="links">
-      <a href="" class="link">Home</a>
-      <a href="" class="link">O mnie</a>
-      <a href="" class="link">Kontakt</a>
-      <a href="" class="link">Projekty</a>
-    </div>
-  </header>
+  <HeadPage>Lista projektów</HeadPage>
 
   <div class="project-card-wrapper">
     <ProjectCard
@@ -26,6 +18,7 @@
 import ProjectCard from "@/components/ProjectCard.vue";
 import { ref, computed } from "vue";
 import { projectsData } from "@/utility/projectsList";
+import HeadPage from "@/components/HeadPage.vue";
 
 const projects = ref(projectsData);
 
@@ -45,28 +38,7 @@ body {
 section {
   margin-bottom: 2rem;
 }
-.headline-main {
-  display: flex;
-  width: 100%;
-  height: 10vh;
-  min-height: 80px;
-  background-color: var(--primary-background-color);
-  flex-direction: column;
-}
-.headline-text {
-  margin: 1vh;
-  color: var(--headline-text-color);
-  text-align: center;
-  border: 1px dotted rgb(194, 90, 90);
-}
-.links {
-  text-align: end;
-  border: 1px dotted rgb(56, 125, 37);
-}
-.link {
-  padding: 1vw;
-  color: var(--headline-text-color);
-}
+
 .project-card-wrapper {
   display: grid;
   width: 100%;
