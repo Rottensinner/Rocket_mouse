@@ -14,6 +14,14 @@ export const projectsData = [
     description: "Prosty kalkulator",
     technology: "Vue.js + CSS",
     img: "../src/assets/cat.webp",
-    site: "/todo-list",
+    site: "/calculator",
+  },
+  {
+    id: 3,
+    name: "ArtDecoTest",
+    description: "ArtDecoTest",
+    technology: "CSS",
+    img: "../src/assets/cat.webp",
+    site: "/artDeco",
   },
 ];
